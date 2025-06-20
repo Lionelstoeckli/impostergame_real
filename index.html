@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Imposter Spiel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎭 Imposter Spiel</h1>
+
+    <div id="setupScreen">
+      <div class="input-row">
+        <input type="text" id="playerName" placeholder="Spielername eingeben">
+        <button onclick="addPlayer()">➕</button>
+      </div>
+      <div id="playerList"></div>
+      <button class="start-btn" onclick="startGame()">Spiel starten 🚀</button>
+    </div>
+
+    <div id="transitionScreen" class="hidden">
+      <h2>Nächster Spieler: <span id="nextPlayerName"></span></h2>
+      <button onclick="showPlayerScreen()">Bereit ✅</button>
+    </div>
+
+    <div id="playerScreen" class="hidden">
+      <h2>Hallo, <span id="currentPlayerName"></span>!</h2>
+      <p id="wordDisplay"></p>
+      <button onclick="nextPlayer()">Weiter ➡️</button>
+    </div>
+
+    <div id="endScreen" class="hidden">
+      <h2>🎉 Spiel beginnt!</h2>
+      <p><span id="starterName"></span> ist als Erstes dran.</p>
+      <button onclick="restartGame()">🔁 Neues Spiel</button>
+      <button onclick="goHome()">🏠 Home</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
